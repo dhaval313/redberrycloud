@@ -1,66 +1,153 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 10%;
-    align-items: center;
-    border-bottom: 1px solid #707070
+  position: relative;
+  display: flex;
+  width: 95%;
+  margin: auto;
+  height: 8%;
+  align-items: center;
+}
+
+.header_hr {
+  border-top: 1px solid #c0c0c0;
 }
 
 .logo {
-    display: flex;
-    flex: 1;
-    margin: 10px;
+  display: flex;
+  flex: 1.8;
+  margin-left: 3%;
 }
 
-.logo h1 {
-    margin-left: 10px;
-    font-size: 35px;
-}
-
-.logo a {
-    color: #303030;
-    text-decoration: none;
+.logo img {
+  width: 50px;
 }
 
 nav {
-    position: relative;
-    flex: 1;
+  position: relative;
+  flex: 1;
 }
 
 .links {
-    margin-left: auto;
-    margin-right: 50px;
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
+  margin-left: auto;
+  margin-right: 50px;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
 }
 ul li {
-    position: relative;
+  position: relative;
 }
 .links a {
-    position: relative;
-    color: #303030;
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
+  position: relative;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
 }
-.home_link a, .about_link a, .services_link a, .contact_link a{
-    transition: .2s linear;
-}
-
-.home_link a:hover, .about_link a:hover, .services_link a:hover, .contact_link a:hover{
-    color: #0096FF;
+.home_link a,
+.services_link a,
+.contact_link a {
+  transition: 0.2s linear;
 }
 
-@media screen and (max-width: )
+.home_link a:hover,
+.services_link a:hover,
+.contact_link a:hover {
+  color: #0fc3db;
+}
+
+.about_us {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+
+.bean {
+  width: 400px;
+  position: absolute;
+  margin-left: -300px;
+  z-index: -1;
+  animation: bean 10s linear infinite;
+}
+
+@keyframes bean {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.about_text {
+  width: 20%;
+  margin-top: 10%;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size: 20px;
+  flex: 1.2;
+  text-align: justify;
+}
+
+.about_text h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  background: linear-gradient(to right, #0556e8, #0598f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 50px;
+}
+
+.t1 {
+  color: #94b0a9;
+  font-size: 18px;
+}
+
+.read_more {
+  font-size: 16px;
+  margin-top: 10%;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid #0598f2;
+  background-color: white;
+  color: #0598f2;
+}
+
+.read_more:hover {
+  background-color: #0598f2;
+  color: white;
+  transition: 0.3s;
+}
+
+.about_svg {
+  flex: 1;
+}
+
+.about_svg svg {
+  width: 90%;
+}
+
+#head {
+  animation: head 2s ease-in-out alternate-reverse infinite;
+  transform-origin: 15%;
+}
+
+@keyframes head {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
